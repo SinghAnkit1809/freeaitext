@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Text Generator | Product Descriptions, Captions, Emails & More</title>
+    <meta name="description" content="Generate product descriptions, social captions, emails, YouTube titles, blog outlines, resumes & pitches with free AI. No signup required.">
+    <meta name="keywords" content="free AI text generator, AI writing tools, content generator, copy writer AI, free AI content generator">
+    <meta property="og:title" content="Free AI Text Generator Hub - Write Better Copy Instantly">
+    <meta property="og:description" content="Generate product descriptions, social captions, emails, blog outlines, resumes & pitches with free AI. No signup required.">
+    <link rel="canonical" href="https://freeaitext.pages.dev/">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Free AI Text Generator Hub",
+        "description": "Generate product descriptions, social captions, emails, YouTube titles, blog outlines, resumes & pitches with free AI. No signup required."
+    }
+    </script>
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #14b8a6 0%, #0891b2 100%);
+            color: white;
+            padding: 48px 16px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .subheading {
+            font-size: 18px;
+            margin-bottom: 24px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            max-width: 900px;
+            margin: 32px auto 0;
+            text-align: left;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+        }
+
+        .benefit-item::before {
+            content: "✓";
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .tabs {
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 2px solid #e5e7eb;
+            z-index: 100;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .tabs-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tab {
+            flex: 1;
+            min-width: 120px;
+            padding: 16px 24px;
+            background: white;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            color: #6b7280;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            background: #f9fafb;
+            color: #14b8a6;
+        }
+
+        .tab.active {
+            color: #14b8a6;
+            border-bottom-color: #14b8a6;
+            background: #f0fdfa;
+        }
+
+        .tool-section {
+            padding: 48px 16px;
+        }
+
+        .tool-section.hidden {
+            display: none;
+        }
+
+        .tool-section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .tool-section > p {
+            font-size: 16px;
+            color: #6b7280;
+            margin-bottom: 32px;
+            max-width: 700px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            background: white;
+            transition: all 0.2s;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #14b8a6;
+            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 36px;
+        }
+
+        .toggle-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toggle {
+            position: relative;
+            width: 48px;
+            height: 24px;
+            background: #d1d5db;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .toggle.active {
+            background: #14b8a6;
+        }
+
+        .toggle::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.2s;
+        }
+
+        .toggle.active::after {
+            transform: translateX(24px);
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #14b8a6 0%, #0891b2 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #14b8a6;
+            border: 2px solid #14b8a6;
+        }
+
+        .btn-secondary:hover {
+            background: #f0fdfa;
+        }
+
+        .btn-copy {
+            padding: 8px 16px;
+            font-size: 14px;
+            background: white;
+            color: #6b7280;
+            border: 1px solid #d1d5db;
+        }
+
+        .btn-copy:hover {
+            background: #f9fafb;
+            border-color: #14b8a6;
+            color: #14b8a6;
+        }
+
+        .output-area {
+            margin-top: 32px;
+        }
+
+        .output-area.hidden {
+            display: none;
+        }
+
+        .output-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .output-grid.two-col {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .output-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .output-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .variant-label {
+            font-weight: 700;
+            color: #14b8a6;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .output-content {
+            line-height: 1.7;
+            color: #374151;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .output-footer {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .meta-info {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 48px 24px;
+        }
+
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid #e5e7eb;
+            border-top-color: #14b8a6;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+
+        .section-alt {
+            background: white;
+            padding: 64px 16px;
+        }
+
+        .how-it-works {
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 48px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #14b8a6 0%, #0891b2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 16px;
+        }
+
+        .step h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: #6b7280;
+        }
+
+        .faq {
+            background: #f9fafb;
+            padding: 64px 16px;
+        }
+
+        .faq h2 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .faq-answer {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            padding: 48px 16px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #14b8a6;
+        }
+
+        .footer-cta {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #14b8a6;
+        }
+
+        .notification {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #111827;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .error-inline {
+            color: #dc2626;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .subheading {
+                font-size: 16px;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .tab {
+                min-width: 100px;
+                padding: 12px 16px;
+                font-size: 14px;
+            }
+
+            .tool-section h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">✨ Free AI Text Hub</div>
+            <h1>Free AI Text Generator Hub — Write Better Copy Instantly</h1>
+            <p class="subheading">Generate product descriptions, social captions, emails, blog outlines, resumes & more with AI. No signup. No limits. 100% free.</p>
+            <div class="benefits">
+                <div class="benefit-item">Generate unlimited content in seconds</div>
+                <div class="benefit-item">No sign-up required</div>
+                <div class="benefit-item">7 specialized AI writing tools</div>
+                <div class="benefit-item">Copy-paste ready, fully customizable</div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="tabs">
+        <div class="tabs-container">
+            <button class="tab active" data-tool="product">Product</button>
+            <button class="tab" data-tool="social">Social</button>
+            <button class="tab" data-tool="youtube">YouTube</button>
+            <button class="tab" data-tool="email">Email</button>
+            <button class="tab" data-tool="blog">Blog</button>
+            <button class="tab" data-tool="resume">Resume</button>
+            <button class="tab" data-tool="pitch">Pitch</button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="product" class="tool-section">
+            <div class="container">
+                <h2>Free Product Description Generator</h2>
+                <p>Enter your product details and let AI write compelling descriptions for Shopify, Amazon, Etsy, or any marketplace.</p>
+                
+                <form id="product-form">
+                    <div class="form-group">
+                        <label for="product-name">Product Name *</label>
+                        <input type="text" id="product-name" placeholder="e.g., Wireless Bluetooth Headphones" required>
+                        <div class="error-inline" id="product-name-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-features">Key Features</label>
+                        <textarea id="product-features" placeholder="e.g., 30-hour battery life, noise cancellation, foldable design"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-audience">Target Audience</label>
+                        <select id="product-audience">
+                            <option value="All">All</option>
+                            <option value="Luxury">Luxury</option>
+                            <option value="Budget-Conscious">Budget-Conscious</option>
+                            <option value="Tech-Savvy">Tech-Savvy</option>
+                            <option value="Parents">Parents</option>
+                            <option value="Professionals">Professionals</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-marketplace">Marketplace</label>
+                        <select id="product-marketplace">
+                            <option value="Generic">Generic</option>
+                            <option value="Amazon">Amazon</option>
+                            <option value="Shopify">Shopify</option>
+                            <option value="Etsy">Etsy</option>
+                            <option value="eBay">eBay</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-tone">Tone</label>
+                        <select id="product-tone">
+                            <option value="Professional">Professional</option>
+                            <option value="Casual">Casual</option>
+                            <option value="Luxury">Luxury</option>
+                            <option value="Urgent">Urgent</option>
+                            <option value="Friendly">Friendly</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-length">Word Count</label>
+                        <select id="product-length">
+                            <option value="Short 50-100">Short 50-100</option>
+                            <option value="Medium 100-200">Medium 100-200</option>
+                            <option value="Long 200-300">Long 200-300</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Generate Description</button>
+                </form>
+
+                <div id="product-output" class="output-area hidden">
+                    <div class="loading" id="product-loading">
+                        <div class="spinner"></div>
+                        <p>Generating your product descriptions...</p>
+                    </div>
+                    <div id="product-results"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social" class="tool-section hidden">
+            <div class="container">
+                <h2>Social Media Caption & Hashtag Generator</h2>
+                <p>Create engaging captions tailored to Instagram, TikTok, X, LinkedIn or any social platform.</p>
+                
+                <form id="social-form">
+                    <div class="form-group">
+                        <label for="social-topic">Topic/Post Idea *</label>
+                        <textarea id="social-topic" placeholder="e.g., Launching our new sustainable coffee blend" required></textarea>
+                        <div class="error-inline" id="social-topic-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="social-platform">Platform</label>
+                        <select id="social-platform">
+                            <option value="Instagram">Instagram</option>
+                            <option value="TikTok">TikTok</option>
+                            <option value="X/Twitter">X/Twitter</option>
+                            <option value="LinkedIn">LinkedIn</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Pinterest">Pinterest</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="social-type">Content Type</label>
+                        <select id="social-type">
+                            <option value="Product Promo">Product Promo</option>
+                            <option value="Tutorial">Tutorial</option>
+                            <option value="Quote">Quote</option>
+                            <option value="Behind-the-Scenes">Behind-the-Scenes</option>
+                            <option value="Question">Question</option>
+                            <option value="Story">Story</option>
+                            <option value="Announcement">Announcement</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="social-tone">Tone</label>
+                        <select id="social-tone">
+                            <option value="Casual">Casual</option>
+                            <option value="Funny">Funny</option>
+                            <option value="Inspirational">Inspirational</option>
+                            <option value="Professional">Professional</option>
+                            <option value="Urgent">Urgent</option>
+                            <option value="Educational">Educational</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Include Hashtags?</label>
+                        <div class="toggle-group">
+                            <div class="toggle active" id="social-hashtags"></div>
+                            <span id="social-hashtags-label">Yes</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="social-variants">Number of Variants</label>
+                        <select id="social-variants">
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Generate Captions</button>
+                </form>
+
+                <div id="social-output" class="output-area hidden">
+                    <div class="loading" id="social-loading">
+                        <div class="spinner"></div>
+                        <p>Generating your social media captions...</p>
+                    </div>
+                    <div id="social-results"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="youtube" class="tool-section hidden">
+            <div class="container">
+                <h2>YouTube Title & Description Generator</h2>
+                <p>Generate clickable titles, SEO-optimized descriptions, and hook lines for YouTube videos.</p>
+                
+                <form id="youtube-form">
+                    <div class="form-group">
+                        <label for="youtube-topic">Video Topic *</label>
+                        <textarea id="youtube-topic" placeholder="e.g., How to build a gaming PC for under $1000" required></textarea>
+                        <div class="error-inline" id="youtube-topic-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="youtube-niche">Video Niche</label>
+                        <select id="youtube-niche">
+                            <option value="Tech">Tech</option>
+                            <option value="Gaming">Gaming</option>
+                            <option value="Vlog">Vlog</option>
+                            <option value="Tutorial">Tutorial</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Education">Education</option>
+                            <option value="Beauty">Beauty</option>
+                            <option value="Fitness">Fitness</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="youtube-audience">Target Audience</label>
+                        <select id="youtube-audience">
+                            <option value="General">General</option>
+                            <option value="Kids">Kids</option>
+                            <option value="Teens">Teens</option>
+                            <option value="Young Adults">Young Adults</option>
+                            <option value="Professionals">Professionals</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="youtube-length">Video Length</label>
+                        <select id="youtube-length">
+                            <option value="Short <1 min">Short <1 min</option>
+                            <option value="Medium 5-15 min">Medium 5-15 min</option>
+                            <option value="Long 20+ min">Long 20+ min</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Generate YouTube Content</button>
+                </form>
+
+                <div id="youtube-output" class="output-area hidden">
+                    <div class="loading" id="youtube-loading">
+                        <div class="spinner"></div>
+                        <p>Generating your YouTube content...</p>
+                    </div>
+                    <div id="youtube-results"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="email" class="tool-section hidden">
+            <div class="container">
+                <h2>Free Cold Email Generator</h2>
+                <p>Write compelling cold emails and outreach messages for sales, partnerships, or collaborations.</p>
+                
+                <form id="email-form">
+                    <div class="form-group">
+                        <label for="email-target">Target Person/Company *</label>
+                        <input type="text" id="email-target" placeholder="e.g., Marketing Director at TechCorp" required>
+                        <div class="error-inline" id="email-target-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-product">Your Product/Service *</label>
+                        <textarea id="email-product" placeholder="e.g., AI-powered email automation platform that saves 10 hours/week" required></textarea>
+                        <div class="error-inline" id="email-product-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-value">Value Proposition</label>
+                        <input type="text" id="email-value" placeholder="e.g., Reduce email workload by 80%">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-goal">Goal</label>
+                        <select id="email-goal">
+                            <option value="Demo Request">Demo Request</option>
+                            <option value="Reply/Engagement">Reply/Engagement</option>
+                            <option value="Meeting Setup">Meeting Setup</option>
+                            <option value="Newsletter Signup">Newsletter Signup</option>
+                            <option value="Partnership">Partnership</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-tone">Tone</label>
+                        <select id="email-tone">
+                            <option value="Professional">Professional</option>
+                            <option value="Casual">Casual</option>
+                            <option value="Funny">Funny</option>
+                            <option value="Direct">Direct</option>
+                            <option value="Personal">Personal</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-type">Email Type</label>
+                        <select id="email-type">
+                            <option value="Sales">Sales</option>
+                            <option value="Partnership">Partnership</option>
+                            <option value="Guest Post">Guest Post</option>
+                            <option value="Collaboration">Collaboration</option>
+                            <option value="Support Request">Support Request</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Generate Email</button>
+                </form>
+
+                <div id="email-output" class="output-area hidden">
+                    <div class="loading" id="email-loading">
+                        <div class="spinner"></div>
+                        <p>Generating your cold emails...</p>
+                    </div>
+                    <div id="email-results"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="tool-section hidden">
+            <div class="container">
+                <h2>Free Blog Outline & Structure Generator</h2>
+                <p>Create detailed blog post outlines and intro paragraphs for any topic.</p>
+                
+                <form id="blog-form">
+                    <div class="form-group">
+                        <label for="blog-topic">Blog Topic/Keyword *</label>
+                        <input type="text" id="blog-topic" placeholder="e.g., Best email marketing strategies for 2024" required>
+                        <div class="error-inline" id="blog-topic-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="blog-audience">Target Audience</label>
+                        <select id="blog-audience">
+                            <option value="Beginners">Beginners</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="General">General</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="blog-type">Blog Type</label>
+                        <select id="blog-type">
+                            <option value="How-To">How-To</option>
+                            <option value="Tutorial">Tutorial</option>
+                            <option value="Opinion">Opinion</option>
+                            <option value="List">List</option>
+                            <option value="Case Study">Case Study</option>
+                            <option value="News">News</option>
+                            <option value="Deep Dive">Deep Dive</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="blog-length">Blog Length</label>
+                        <select id="blog-length">
+                            <option value="Short 800-1200 words">Short 800-1200 words</option>
+                            <option value="Medium 1500-2000">Medium 1500-2000</option>
+                            <option value="Long 2500+ words">Long 2500+ words</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Include FAQ Section?</label>
+                        <div class="toggle-group">
+                            <div class="toggle active" id="blog-faq"></div>
+                            <span id="blog-faq-label">Yes</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Generate Outline</button>
+                </form>
+
+                <div id="blog-output" class="output-area hidden">
+                    <div class="loading" id="blog-loading">
+                        <div class="spinner"></div>
+                        <p>Generating your blog outline...</p>
+                    </div>
+                    <div id="blog-results"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="tool-section hidden">
+            <div class="container">
+                <h2>Resume Bullet & LinkedIn Content Generator</h2>
+                <p>Improve your resume bullets and craft compelling LinkedIn profiles.</p>
+                
+                <form id="resume-form">
+                    <div class="form-group">
+                        <label for="resume-title">Job Title/Role *</label>
+                        <input type="text" id="resume-title" placeholder="e.g., Senior Software Engineer" required>
+                        <div class="error-inline" id="resume-title-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resume-achievement">Your Achievement/Experience *</label>
+                        <textarea id="resume-achievement" placeholder="e.g., Led a team to build a new feature that increased user retention" required></textarea>
+                        <div class="error-inline" id="resume-achievement-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resume-target">Target Job Title</label>
+                        <input type="text" id="resume-target" placeholder="e.g., Tech Lead (optional)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resume-tone">Tone</label>
+                        <select id="resume-tone">
+                            <option value="Quantified Results">Quantified Results</option>
+                            <option value="Leadership">Leadership</option>
+                            <option value="Technical">Technical</option>
+                            <option value="Impact-Focused">Impact-Focused</option>
+                            <option value="General">General</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resume-output-type">Output Type</label>
+                        <select id="resume-output-type">
+                            <option value="Resume Bullet">Resume Bullet</option>
+                            <option value="LinkedIn Post">LinkedIn Post</option>
+                            <option value="LinkedIn About Section">LinkedIn About Section</option>
+                            <option value="Cover Letter">Cover Letter</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Generate Content</button>
+                </form>
+
+                <div id="resume-output" class="output-area hidden">
+                    <div class="loading" id="resume-loading">
+                        <div class="spinner"></div>
+                        <p>Generating your professional content...</p>
+                    </div>
+                    <div id="resume-results"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pitch" class="tool-section hidden">
+            <div class="container">
+                <h2>Free Startup Pitch & One-Liner Generator</h2>
+                <p>Create compelling pitch decks, elevator pitches, and taglines for your startup idea.</p>
+                
+                <form id="pitch-form">
+                    <div class="form-group">
+                        <label for="pitch-name">Startup Idea/Name *</label>
+                        <input type="text" id="pitch-name" placeholder="e.g., TaskFlow" required>
+                        <div class="error-inline" id="pitch-name-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pitch-problem">Problem You Solve *</label>
+                        <textarea id="pitch-problem" placeholder="e.g., Small teams waste 15 hours/week on scattered task management" required></textarea>
+                        <div class="error-inline" id="pitch-problem-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pitch-market">Target Market</label>
+                        <input type="text" id="pitch-market" placeholder="e.g., Remote teams of 5-50 people">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pitch-advantage">Unique Advantage</label>
+                        <input type="text" id="pitch-advantage" placeholder="e.g., AI-powered prioritization that learns team patterns">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Generate Pitch</button>
+                </form>
+
+                <div id="pitch-output" class="output-area hidden">
+                    <div class="loading" id="pitch-loading">
+                        <div class="spinner"></div>
+                        <p>Generating your startup pitch...</p>
+                    </div>
+                    <div id="pitch-results"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt how-it-works">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Choose Your Tool</h3>
+                        <p>Select from 7 specialized AI writing tools and enter your details</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>AI Generates Content</h3>
+                        <p>Our AI creates multiple high-quality content variants in seconds</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Copy & Use</h3>
+                        <p>Copy your favorite version, customize it, and use it instantly</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">Is this really free?</div>
+                        <div class="faq-answer">Yes! AI Text Hub is completely free to use with no hidden costs, no signup requirements, and no usage limits. Generate as much content as you need.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Can I use generated content commercially?</div>
+                        <div class="faq-answer">Absolutely! All content generated by our AI tools can be used for personal or commercial purposes. You have full rights to edit, publish, and use the generated text however you like.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How is this different from ChatGPT?</div>
+                        <div class="faq-answer">While ChatGPT is a general-purpose AI, our tools are specifically optimized for different content types with pre-built templates and formats. You get multiple variants instantly without needing to craft complex prompts.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Can I regenerate if I don't like the results?</div>
+                        <div class="faq-answer">Yes! Each tool includes a regenerate button that creates fresh variants with different styles and approaches. You can regenerate as many times as needed.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What about plagiarism?</div>
+                        <div class="faq-answer">Our AI generates original content based on your inputs. While the content is unique, we always recommend reviewing and customizing it to match your brand voice and ensuring it meets your specific needs.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Which tool should I use first?</div>
+                        <div class="faq-answer">Start with the tool that matches your immediate need. E-commerce sellers love the Product Description tool, content creators prefer Social Media Captions, while job seekers find the Resume tool invaluable.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-cta">Start Generating Free Content Now</div>
+            <div class="footer-links">
+                <a href="#product">Product Descriptions</a>
+                <a href="#social">Social Captions</a>
+                <a href="#youtube">YouTube Titles</a>
+                <a href="#email">Cold Emails</a>
+                <a href="#blog">Blog Outlines</a>
+                <a href="#resume">Resume Builder</a>
+                <a href="#pitch">Startup Pitches</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <p style="margin-top: 24px; color: #9ca3af;">&copy; 2024 AI Text Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="notification" id="notification"></div>
+
+    <script>
+        // State management
+        let currentTool = 'product';
+        const formData = {};
+        let isGenerating = false;
+
+        // Toggle functionality
+        function initToggle(toggleId, labelId) {
+            const toggle = document.getElementById(toggleId);
+            const label = document.getElementById(labelId);
+            let active = true;
+
+            toggle.addEventListener('click', () => {
+                active = !active;
+                toggle.classList.toggle('active');
+                label.textContent = active ? 'Yes' : 'No';
+            });
+
+            return () => active;
+        }
+
+        const getSocialHashtags = initToggle('social-hashtags', 'social-hashtags-label');
+        const getBlogFaq = initToggle('blog-faq', 'blog-faq-label');
+
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tool = tab.dataset.tool;
+                
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                document.querySelectorAll('.tool-section').forEach(section => {
+                    section.classList.add('hidden');
+                });
+                
+                document.getElementById(tool).classList.remove('hidden');
+                currentTool = tool;
+            });
+        });
+
+        // Notification system
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 2000);
+        }
+
+        // Copy to clipboard
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                showNotification('Copied to clipboard!');
+            } catch (err) {
+                showNotification('Failed to copy');
+            }
+        }
+
+        // API call to Pollinations
+        async function generateText(prompt) {
+            const response = await fetch(`https://text.pollinations.ai/${encodeURIComponent(prompt)}`);
+            if (!response.ok) throw new Error('API request failed');
+            return await response.text();
+        }
+
+        // Create output card
+        function createOutputCard(content, index, wordCount = null) {
+            const words = wordCount || content.trim().split(/\s+/).length;
+            return `
+                <div class="output-card">
+                    <div class="output-card-header">
+                        <span class="variant-label">Variant ${index + 1}</span>
+                    </div>
+                    <div class="output-content">${content}</div>
+                    <div class="output-footer">
+                        <span class="meta-info">${words} words</span>
+                        <button class="btn btn-copy" onclick="copyToClipboard(\`${content.replace(/`/g, '\\`')}\`)">Copy</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Product Description Generator
+        document.getElementById('product-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (isGenerating) return;
+
+            const name = document.getElementById('product-name').value.trim();
+            const features = document.getElementById('product-features').value.trim();
+            const audience = document.getElementById('product-audience').value;
+            const marketplace = document.getElementById('product-marketplace').value;
+            const tone = document.getElementById('product-tone').value;
+            const length = document.getElementById('product-length').value;
+
+            if (!name) {
+                document.getElementById('product-name-error').textContent = 'Product name is required';
+                return;
+            }
+            document.getElementById('product-name-error').textContent = '';
+
+            const outputArea = document.getElementById('product-output');
+            const loading = document.getElementById('product-loading');
+            const results = document.getElementById('product-results');
+
+            outputArea.classList.remove('hidden');
+            loading.style.display = 'block';
+            results.innerHTML = '';
+            isGenerating = true;
+
+            const prompt = `You are an expert e-commerce copywriter. Generate 2 compelling, SEO-optimized product descriptions for "${name}". ${features ? `Key features: ${features}.` : ''} Target audience: ${audience}. Tone: ${tone}. Optimized for ${marketplace}. Keep under ${length} words. Make each description unique and compelling. Focus on benefits, not just features. Format: Return exactly 2 descriptions separated by "---VARIANT---".`;
+
+            try {
+                const response = await generateText(prompt);
+                const variants = response.split('---VARIANT---').filter(v => v.trim()).slice(0, 2);
+                
+                loading.style.display = 'none';
+                
+                if (variants.length === 0) {
+                    results.innerHTML = '<div class="error-message">Unable to generate descriptions. Please try again.</div>';
+                } else {
+                    results.innerHTML = '<div class="output-grid two-col">' + 
+                        variants.map((variant, i) => createOutputCard(variant.trim(), i)).join('') +
+                        '</div>' +
+                        '<button class="btn btn-secondary" style="margin-top: 24px;" onclick="document.getElementById(\'product-form\').dispatchEvent(new Event(\'submit\'))">Regenerate</button>';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                results.innerHTML = '<div class="error-message">Something went wrong. Please try again.</div>';
+            }
+
+            isGenerating = false;
+        });
+
+        // Social Media Caption Generator
+        document.getElementById('social-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (isGenerating) return;
+
+            const topic = document.getElementById('social-topic').value.trim();
+            const platform = document.getElementById('social-platform').value;
+            const type = document.getElementById('social-type').value;
+            const tone = document.getElementById('social-tone').value;
+            const includeHashtags = getSocialHashtags();
+            const variants = parseInt(document.getElementById('social-variants').value);
+
+            if (!topic) {
+                document.getElementById('social-topic-error').textContent = 'Topic is required';
+                return;
+            }
+            document.getElementById('social-topic-error').textContent = '';
+
+            const outputArea = document.getElementById('social-output');
+            const loading = document.getElementById('social-loading');
+            const results = document.getElementById('social-results');
+
+            outputArea.classList.remove('hidden');
+            loading.style.display = 'block';
+            results.innerHTML = '';
+            isGenerating = true;
+
+            const prompt = `You are a social media expert. Generate ${variants} engaging captions for ${platform} about: "${topic}". Content type: ${type}. Tone: ${tone}. ${includeHashtags ? 'Include 5-10 relevant hashtags at the end of each caption.' : 'No hashtags needed.'} Make them scroll-stopping and action-driving. Format: Separate each caption with "---VARIANT---".`;
+
+            try {
+                const response = await generateText(prompt);
+                const caps = response.split('---VARIANT---').filter(v => v.trim()).slice(0, variants);
+                
+                loading.style.display = 'none';
+                
+                if (caps.length === 0) {
+                    results.innerHTML = '<div class="error-message">Unable to generate captions. Please try again.</div>';
+                } else {
+                    results.innerHTML = '<div class="output-grid">' + 
+                        caps.map((cap, i) => createOutputCard(cap.trim(), i)).join('') +
+                        '</div>' +
+                        '<button class="btn btn-secondary" style="margin-top: 24px;" onclick="document.getElementById(\'social-form\').dispatchEvent(new Event(\'submit\'))">Regenerate</button>';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                results.innerHTML = '<div class="error-message">Something went wrong. Please try again.</div>';
+            }
+
+            isGenerating = false;
+        });
+
+        // YouTube Generator
+        document.getElementById('youtube-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (isGenerating) return;
+
+            const topic = document.getElementById('youtube-topic').value.trim();
+            const niche = document.getElementById('youtube-niche').value;
+            const audience = document.getElementById('youtube-audience').value;
+            const length = document.getElementById('youtube-length').value;
+
+            if (!topic) {
+                document.getElementById('youtube-topic-error').textContent = 'Video topic is required';
+                return;
+            }
+            document.getElementById('youtube-topic-error').textContent = '';
+
+            const outputArea = document.getElementById('youtube-output');
+            const loading = document.getElementById('youtube-loading');
+            const results = document.getElementById('youtube-results');
+
+            outputArea.classList.remove('hidden');
+            loading.style.display = 'block';
+            results.innerHTML = '';
+            isGenerating = true;
+
+            const prompt = `You are a YouTube SEO expert. For this video: "${topic}" in the ${niche} niche targeting ${audience}, video length ${length}, generate:
+
+1) 5 clickable titles (50-60 characters each)
+2) 2 SEO-optimized descriptions (200-300 words each with keywords)
+3) 3 hook/intro lines
+
+Format clearly with headers:
+TITLES:
+[list titles]
+
+DESCRIPTIONS:
+Description 1: [text]
+---
+Description 2: [text]
+
+HOOKS:
+[list hooks]`;
+
+            try {
+                const response = await generateText(prompt);
+                
+                loading.style.display = 'none';
+                results.innerHTML = `
+                    <div class="output-card">
+                        <div class="output-card-header">
+                            <span class="variant-label">YouTube Content Package</span>
+                        </div>
+                        <div class="output-content">${response}</div>
+                        <div class="output-footer">
+                            <span class="meta-info">${response.split(/\s+/).length} words</span>
+                            <button class="btn btn-copy" onclick="copyToClipboard(\`${response.replace(/`/g, '\\`')}\`)">Copy All</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" style="margin-top: 24px;" onclick="document.getElementById('youtube-form').dispatchEvent(new Event('submit'))">Regenerate</button>
+                `;
+            } catch (error) {
+                loading.style.display = 'none';
+                results.innerHTML = '<div class="error-message">Something went wrong. Please try again.</div>';
+            }
+
+            isGenerating = false;
+        });
+
+        // Cold Email Generator
+        document.getElementById('email-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (isGenerating) return;
+
+            const target = document.getElementById('email-target').value.trim();
+            const product = document.getElementById('email-product').value.trim();
+            const value = document.getElementById('email-value').value.trim();
+            const goal = document.getElementById('email-goal').value;
+            const tone = document.getElementById('email-tone').value;
+            const type = document.getElementById('email-type').value;
+
+            if (!target) {
+                document.getElementById('email-target-error').textContent = 'Target is required';
+                return;
+            }
+            if (!product) {
+                document.getElementById('email-product-error').textContent = 'Product/service is required';
+                return;
+            }
+            document.getElementById('email-target-error').textContent = '';
+            document.getElementById('email-product-error').textContent = '';
+
+            const outputArea = document.getElementById('email-output');
+            const loading = document.getElementById('email-loading');
+            const results = document.getElementById('email-results');
+
+            outputArea.classList.remove('hidden');
+            loading.style.display = 'block';
+            results.innerHTML = '';
+            isGenerating = true;
+
+            const prompt = `You are a cold email expert. Write 2 compelling ${type} cold emails to ${target} about: "${product}". ${value ? `Value proposition: ${value}.` : ''} Goal: ${goal}. Tone: ${tone}. Each email should include a subject line and body (150-250 words). Make them personal, benefit-focused, and with clear CTAs. Format: 
+            
+Email 1:
+Subject: [subject]
+Body: [body]
+---VARIANT---
+Email 2:
+Subject: [subject]
+Body: [body]`;
+
+            try {
+                const response = await generateText(prompt);
+                const emails = response.split('---VARIANT---').filter(v => v.trim()).slice(0, 2);
+                
+                loading.style.display = 'none';
+                
+                if (emails.length === 0) {
+                    results.innerHTML = '<div class="error-message">Unable to generate emails. Please try again.</div>';
+                } else {
+                    results.innerHTML = '<div class="output-grid">' + 
+                        emails.map((email, i) => createOutputCard(email.trim(), i)).join('') +
+                        '</div>' +
+                        '<button class="btn btn-secondary" style="margin-top: 24px;" onclick="document.getElementById(\'email-form\').dispatchEvent(new Event(\'submit\'))">Regenerate</button>';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                results.innerHTML = '<div class="error-message">Something went wrong. Please try again.</div>';
+            }
+
+            isGenerating = false;
+        });
+
+        // Blog Outline Generator
+        document.getElementById('blog-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (isGenerating) return;
+
+            const topic = document.getElementById('blog-topic').value.trim();
+            const audience = document.getElementById('blog-audience').value;
+            const blogType = document.getElementById('blog-type').value;
+            const blogLength = document.getElementById('blog-length').value;
+            const includeFaq = getBlogFaq();
+
+            if (!topic) {
+                document.getElementById('blog-topic-error').textContent = 'Blog topic is required';
+                return;
+            }
+            document.getElementById('blog-topic-error').textContent = '';
+
+            const outputArea = document.getElementById('blog-output');
+            const loading = document.getElementById('blog-loading');
+            const results = document.getElementById('blog-results');
+
+            outputArea.classList.remove('hidden');
+            loading.style.display = 'block';
+            results.innerHTML = '';
+            isGenerating = true;
+
+            const prompt = `You are a content strategist. Create a detailed blog outline for: "${topic}". Type: ${blogType}. Target audience: ${audience}. Length: ${blogLength}. ${includeFaq ? 'Include an FAQ section.' : ''}
+
+Generate:
+1) SEO-optimized title
+2) Compelling intro paragraph (100 words)
+3) Detailed outline with H2s and H3s with bullet points
+4) Conclusion paragraph
+${includeFaq ? '5) 5 FAQ questions' : ''}
+
+Format in markdown for easy copying.`;
+
+            try {
+                const response = await generateText(prompt);
+                
+                loading.style.display = 'none';
+                results.innerHTML = `
+                    <div class="output-card">
+                        <div class="output-card-header">
+                            <span class="variant-label">Blog Outline & Structure</span>
+                        </div>
+                        <div class="output-content">${response}</div>
+                        <div class="output-footer">
+                            <span class="meta-info">${response.split(/\s+/).length} words</span>
+                            <button class="btn btn-copy" onclick="copyToClipboard(\`${response.replace(/`/g, '\\`')}\`)">Copy Outline</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" style="margin-top: 24px;" onclick="document.getElementById('blog-form').dispatchEvent(new Event('submit'))">Regenerate</button>
+                `;
+            } catch (error) {
+                loading.style.display = 'none';
+                results.innerHTML = '<div class="error-message">Something went wrong. Please try again.</div>';
+            }
+
+            isGenerating = false;
+        });
+
+        // Resume/LinkedIn Generator
+        document.getElementById('resume-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (isGenerating) return;
+
+            const title = document.getElementById('resume-title').value.trim();
+            const achievement = document.getElementById('resume-achievement').value.trim();
+            const targetTitle = document.getElementById('resume-target').value.trim();
+            const resumeTone = document.getElementById('resume-tone').value;
+            const outputType = document.getElementById('resume-output-type').value;
+
+            if (!title) {
+                document.getElementById('resume-title-error').textContent = 'Job title is required';
+                return;
+            }
+            if (!achievement) {
+                document.getElementById('resume-achievement-error').textContent = 'Achievement is required';
+                return;
+            }
+            document.getElementById('resume-title-error').textContent = '';
+            document.getElementById('resume-achievement-error').textContent = '';
+
+            const outputArea = document.getElementById('resume-output');
+            const loading = document.getElementById('resume-loading');
+            const results = document.getElementById('resume-results');
+
+            outputArea.classList.remove('hidden');
+            loading.style.display = 'block';
+            results.innerHTML = '';
+            isGenerating = true;
+
+            const prompt = `You are a career coach expert. Role: ${title}. Experience/Achievement: "${achievement}". ${targetTitle ? `Target role: ${targetTitle}.` : ''} Tone: ${resumeTone}.
+
+Generate 5 variants of ${outputType} that are compelling, professional, and achievement-focused. Use action verbs and quantify results where possible. For LinkedIn content, make it engaging and authentic. Separate each variant with "---VARIANT---".`;
+
+            try {
+                const response = await generateText(prompt);
+                const variants = response.split('---VARIANT---').filter(v => v.trim()).slice(0, 5);
+                
+                loading.style.display = 'none';
+                
+                if (variants.length === 0) {
+                    results.innerHTML = '<div class="error-message">Unable to generate content. Please try again.</div>';
+                } else {
+                    results.innerHTML = '<div class="output-grid">' + 
+                        variants.map((variant, i) => {
+                            const charCount = variant.trim().length;
+                            return `
+                                <div class="output-card">
+                                    <div class="output-card-header">
+                                        <span class="variant-label">Variant ${i + 1}</span>
+                                    </div>
+                                    <div class="output-content">${variant.trim()}</div>
+                                    <div class="output-footer">
+                                        <span class="meta-info">${charCount} characters</span>
+                                        <button class="btn btn-copy" onclick="copyToClipboard(\`${variant.trim().replace(/`/g, '\\`')}\`)">Copy</button>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('') +
+                        '</div>' +
+                        '<button class="btn btn-secondary" style="margin-top: 24px;" onclick="document.getElementById(\'resume-form\').dispatchEvent(new Event(\'submit\'))">Regenerate</button>';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                results.innerHTML = '<div class="error-message">Something went wrong. Please try again.</div>';
+            }
+
+            isGenerating = false;
+        });
+
+        // Startup Pitch Generator
+        document.getElementById('pitch-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (isGenerating) return;
+
+            const name = document.getElementById('pitch-name').value.trim();
+            const problem = document.getElementById('pitch-problem').value.trim();
+            const market = document.getElementById('pitch-market').value.trim();
+            const advantage = document.getElementById('pitch-advantage').value.trim();
+
+            if (!name) {
+                document.getElementById('pitch-name-error').textContent = 'Startup name is required';
+                return;
+            }
+            if (!problem) {
+                document.getElementById('pitch-problem-error').textContent = 'Problem statement is required';
+                return;
+            }
+            document.getElementById('pitch-name-error').textContent = '';
+            document.getElementById('pitch-problem-error').textContent = '';
+
+            const outputArea = document.getElementById('pitch-output');
+            const loading = document.getElementById('pitch-loading');
+            const results = document.getElementById('pitch-results');
+
+            outputArea.classList.remove('hidden');
+            loading.style.display = 'block';
+            results.innerHTML = '';
+            isGenerating = true;
+
+            const prompt = `You are an expert startup pitch writer. Startup: "${name}". Problem: "${problem}". ${market ? `Target market: ${market}.` : ''} ${advantage ? `Unique advantage: ${advantage}.` : ''}
+
+Generate:
+1) One-line tagline (Twitter style, max 140 chars)
+2) 30-second elevator pitch (2-3 sentences)
+3) 2-minute pitch outline with structure (Problem, Solution, Market, Business Model, Why Now)
+4) 3 tagline variations
+
+Make it compelling, memorable, and investment-ready.
+
+Format:
+TAGLINE: [text]
+---VARIANT---
+ELEVATOR PITCH: [text]
+---VARIANT---
+2-MINUTE PITCH: [text]
+---VARIANT---
+TAGLINE VARIATIONS: [list]`;
+
+            try {
+                const response = await generateText(prompt);
+                
+                loading.style.display = 'none';
+                results.innerHTML = `
+                    <div class="output-card">
+                        <div class="output-card-header">
+                            <span class="variant-label">Startup Pitch Package</span>
+                        </div>
+                        <div class="output-content">${response}</div>
+                        <div class="output-footer">
+                            <span class="meta-info">${response.split(/\s+/).length} words</span>
+                            <button class="btn btn-copy" onclick="copyToClipboard(\`${response.replace(/`/g, '\\`')}\`)">Copy All</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" style="margin-top: 24px;" onclick="document.getElementById('pitch-form').dispatchEvent(new Event('submit'))">Regenerate</button>
+                `;
+            } catch (error) {
+                loading.style.display = 'none';
+                results.innerHTML = '<div class="error-message">Something went wrong. Please try again.</div>';
+            }
+
+            isGenerating = false;
+        });
+    </script>
+</body>
+</html>
