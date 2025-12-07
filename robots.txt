@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://freeaitext.pages.dev/sitemap.xml
+Sitemap: https://freeaitext.devhubankit.xyz/sitemap.xml
